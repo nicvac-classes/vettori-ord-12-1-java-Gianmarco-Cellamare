@@ -1,25 +1,81 @@
-//LEGGERE LE ISTRUZIONI NEL FILE README.md
 
-//Import di Classi Java necessarie al funzionamento del programma
 import java.util.Scanner;
 
-// Classe principale, con metodo main
+
+public static int bubbleNOTott(int[] R,int N){
+    int N,i,j,t,nconfronti;
+    i=0;
+    while (i<=N-1){
+        j=0;
+        while(j<=N-2){
+            if(V[i] > V[j+1]){
+                t=V[i];
+                V[i]=V[j+1];
+                V[j+1]=t;
+                nconfronti++;
+            }
+            j=j+1;
+        }
+        i=i+1
+    }
+    return nconfronti;
+}
+
+public static int bubbleott(int[] R,int N){
+    int N,i,j,t,nconfronti;
+    i=0;
+    while (i<=N-1){
+        j=0;
+        while(j<=N-1){
+            if(V[i] > V[j+1]){
+                t=V[i];
+                V[i]=V[j+1];
+                V[j+1]=t;
+                nconfronti++;
+            }
+            j=j+1;
+        }
+        i=i+1
+    }
+    return nconfronti;
+}
+
+public static int bubbleott1(int[] R,int N){
+    int N,i,j,t,nconfronti;
+    boolean scambio;
+    i=0;
+    while (i<=N-1){
+        j=0;
+        scambio=false;
+        while(j<=N-1){
+            if(V[i] > V[j+1]){
+                t=V[i];
+                V[i]=V[j+1];
+                V[j+1]=t;
+                scambio=true;
+                nconfronti++;
+            }
+            j=j+1;
+        }
+        i=i+1
+    }
+    return nconfronti;
+}
+
+
+
 class Esercizio {
-    // Il programma parte con una chiamata a main().
     public static void main(String args[])
     {
-        //Variabili del programma
-        String nome;
-
-        //Creo l'oggetto in per l'input da tastiera
         Scanner in = new Scanner( System.in );
+        int N,i,j;
+        System.out.print("Inserisci numero elementi ");
+        N = in.nextLine();
+        i=0:
+        do{
+            System.out.print(+V[i]);
+        }while(i<N)
 
-        //Leggo l'input da tastiera
-        System.out.print("Inserisci il tuo nome: ");
-        nome = in.nextLine();
-
-        //Output del nome acquisito da tastiera
-        System.out.println("Ciao "+nome+"!");
     }
 }
 
